@@ -1,0 +1,1182 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20214.22.0213.1102                               -->
+<workbook original-version='18.1' source-build='2021.4.4 (20214.22.0213.1102)' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource caption='MySpotifyDataTable+' inline='true' name='federated.0yqm4np0ddulkn1ae0c4q1j5ukma' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='MySpotifyDataTable' name='textscan.1fgabtv0kwhamn10pagfq0sipq72'>
+            <connection class='textscan' directory='/Users/nicolastobon/Library/Mobile Documents/com~apple~CloudDocs/Data Projects/Spotify Workshop for Personal Github' filename='MySpotifyDataTable.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.1fgabtv0kwhamn10pagfq0sipq72' name='GenresExpandedTable.csv' table='[GenresExpandedTable#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='F1' ordinal='0' />
+            <column datatype='string' name='track_uri' ordinal='1' />
+            <column datatype='string' name='artist_uri' ordinal='2' />
+            <column datatype='string' name='genres' ordinal='3' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
+          <relation connection='textscan.1fgabtv0kwhamn10pagfq0sipq72' name='MySpotifyDataTable.csv' table='[MySpotifyDataTable#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='integer' name='F1' ordinal='0' />
+              <column datatype='datetime' name='endTime' ordinal='1' />
+              <column datatype='string' name='artistName' ordinal='2' />
+              <column datatype='string' name='trackName' ordinal='3' />
+              <column datatype='integer' name='msPlayed' ordinal='4' />
+              <column datatype='string' name='UniqueID' ordinal='5' />
+              <column datatype='string' name='album' ordinal='6' />
+              <column datatype='string' name='track_uri' ordinal='7' />
+            </columns>
+          </relation>
+          <relation connection='textscan.1fgabtv0kwhamn10pagfq0sipq72' name='GenresExpandedTable.csv' table='[GenresExpandedTable#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='integer' name='F1' ordinal='0' />
+              <column datatype='string' name='track_uri' ordinal='1' />
+              <column datatype='string' name='artist_uri' ordinal='2' />
+              <column datatype='string' name='genres' ordinal='3' />
+            </columns>
+          </relation>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <cols>
+          <map key='[F1 (GenresExpandedTable.csv)]' value='[GenresExpandedTable.csv].[F1]' />
+          <map key='[F1]' value='[MySpotifyDataTable.csv].[F1]' />
+          <map key='[UniqueID]' value='[MySpotifyDataTable.csv].[UniqueID]' />
+          <map key='[album]' value='[MySpotifyDataTable.csv].[album]' />
+          <map key='[artistName]' value='[MySpotifyDataTable.csv].[artistName]' />
+          <map key='[artist_uri]' value='[GenresExpandedTable.csv].[artist_uri]' />
+          <map key='[endTime]' value='[MySpotifyDataTable.csv].[endTime]' />
+          <map key='[genres]' value='[GenresExpandedTable.csv].[genres]' />
+          <map key='[msPlayed]' value='[MySpotifyDataTable.csv].[msPlayed]' />
+          <map key='[trackName]' value='[MySpotifyDataTable.csv].[trackName]' />
+          <map key='[track_uri (GenresExpandedTable.csv)]' value='[GenresExpandedTable.csv].[track_uri]' />
+          <map key='[track_uri]' value='[MySpotifyDataTable.csv].[track_uri]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[MySpotifyDataTable.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[GenresExpandedTable.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F1]</local-name>
+            <parent-name>[MySpotifyDataTable.csv]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[MySpotifyDataTable.csv_DE565F2DFF97409A9DAB95A964FEA33B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>endTime</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[endTime]</local-name>
+            <parent-name>[MySpotifyDataTable.csv]</parent-name>
+            <remote-alias>endTime</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[MySpotifyDataTable.csv_DE565F2DFF97409A9DAB95A964FEA33B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>artistName</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[artistName]</local-name>
+            <parent-name>[MySpotifyDataTable.csv]</parent-name>
+            <remote-alias>artistName</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[MySpotifyDataTable.csv_DE565F2DFF97409A9DAB95A964FEA33B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>trackName</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[trackName]</local-name>
+            <parent-name>[MySpotifyDataTable.csv]</parent-name>
+            <remote-alias>trackName</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[MySpotifyDataTable.csv_DE565F2DFF97409A9DAB95A964FEA33B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>msPlayed</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[msPlayed]</local-name>
+            <parent-name>[MySpotifyDataTable.csv]</parent-name>
+            <remote-alias>msPlayed</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[MySpotifyDataTable.csv_DE565F2DFF97409A9DAB95A964FEA33B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>UniqueID</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[UniqueID]</local-name>
+            <parent-name>[MySpotifyDataTable.csv]</parent-name>
+            <remote-alias>UniqueID</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[MySpotifyDataTable.csv_DE565F2DFF97409A9DAB95A964FEA33B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>album</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[album]</local-name>
+            <parent-name>[MySpotifyDataTable.csv]</parent-name>
+            <remote-alias>album</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[MySpotifyDataTable.csv_DE565F2DFF97409A9DAB95A964FEA33B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>track_uri</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[track_uri]</local-name>
+            <parent-name>[MySpotifyDataTable.csv]</parent-name>
+            <remote-alias>track_uri</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[MySpotifyDataTable.csv_DE565F2DFF97409A9DAB95A964FEA33B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F1 (GenresExpandedTable.csv)]</local-name>
+            <parent-name>[GenresExpandedTable.csv]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[GenresExpandedTable.csv_1D11178E851B432EA950953F2C2E0B6E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>track_uri</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[track_uri (GenresExpandedTable.csv)]</local-name>
+            <parent-name>[GenresExpandedTable.csv]</parent-name>
+            <remote-alias>track_uri</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[GenresExpandedTable.csv_1D11178E851B432EA950953F2C2E0B6E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>artist_uri</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[artist_uri]</local-name>
+            <parent-name>[GenresExpandedTable.csv]</parent-name>
+            <remote-alias>artist_uri</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[GenresExpandedTable.csv_1D11178E851B432EA950953F2C2E0B6E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>genres</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[genres]</local-name>
+            <parent-name>[GenresExpandedTable.csv]</parent-name>
+            <remote-alias>genres</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[GenresExpandedTable.csv_1D11178E851B432EA950953F2C2E0B6E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Minutes Played' datatype='real' name='[Calculation_3614420189739880448]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[msPlayed]/1000/60' />
+      </column>
+      <column caption='Unique ID' datatype='string' name='[UniqueID]' role='dimension' type='nominal' />
+      <_.fcp.ObjectModelTableType.true...column caption='GenresExpandedTable.csv' datatype='table' name='[__tableau_internal_object_id__].[GenresExpandedTable.csv_1D11178E851B432EA950953F2C2E0B6E]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='MySpotifyDataTable.csv' datatype='table' name='[__tableau_internal_object_id__].[MySpotifyDataTable.csv_DE565F2DFF97409A9DAB95A964FEA33B]' role='measure' type='quantitative' />
+      <column caption='Album' datatype='string' name='[album]' role='dimension' type='nominal' />
+      <column caption='Artist Name' datatype='string' name='[artistName]' role='dimension' type='nominal' />
+      <column caption='End Time' datatype='datetime' name='[endTime]' role='dimension' type='ordinal' />
+      <column caption='Ms Played' datatype='integer' name='[msPlayed]' role='measure' type='quantitative' />
+      <column caption='Track Name' datatype='string' name='[trackName]' role='dimension' type='nominal' />
+      <column caption='Track Uri' datatype='string' name='[track_uri]' role='dimension' type='nominal' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <field-sort-info field-sort-order-type='custom-order'>
+        <field-sort-custom-order field='F1' />
+        <field-sort-custom-order field='endTime' />
+        <field-sort-custom-order field='artistName' />
+        <field-sort-custom-order field='trackName' />
+        <field-sort-custom-order field='msPlayed' />
+        <field-sort-custom-order field='Calculation_3614420189739880448' />
+        <field-sort-custom-order field='UniqueID' />
+        <field-sort-custom-order field='album' />
+        <field-sort-custom-order field='track_uri' />
+      </field-sort-info>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='GenresExpandedTable.csv' id='GenresExpandedTable.csv_1D11178E851B432EA950953F2C2E0B6E'>
+            <properties context=''>
+              <relation connection='textscan.1fgabtv0kwhamn10pagfq0sipq72' name='GenresExpandedTable.csv' table='[GenresExpandedTable#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='integer' name='F1' ordinal='0' />
+                  <column datatype='string' name='track_uri' ordinal='1' />
+                  <column datatype='string' name='artist_uri' ordinal='2' />
+                  <column datatype='string' name='genres' ordinal='3' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+          <object caption='MySpotifyDataTable.csv' id='MySpotifyDataTable.csv_DE565F2DFF97409A9DAB95A964FEA33B'>
+            <properties context=''>
+              <relation connection='textscan.1fgabtv0kwhamn10pagfq0sipq72' name='MySpotifyDataTable.csv' table='[MySpotifyDataTable#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='integer' name='F1' ordinal='0' />
+                  <column datatype='datetime' name='endTime' ordinal='1' />
+                  <column datatype='string' name='artistName' ordinal='2' />
+                  <column datatype='string' name='trackName' ordinal='3' />
+                  <column datatype='integer' name='msPlayed' ordinal='4' />
+                  <column datatype='string' name='UniqueID' ordinal='5' />
+                  <column datatype='string' name='album' ordinal='6' />
+                  <column datatype='string' name='track_uri' ordinal='7' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[track_uri]' />
+              <expression op='[track_uri (GenresExpandedTable.csv)]' />
+            </expression>
+            <first-end-point object-id='MySpotifyDataTable.csv_DE565F2DFF97409A9DAB95A964FEA33B' />
+            <second-end-point object-id='GenresExpandedTable.csv_1D11178E851B432EA950953F2C2E0B6E' />
+          </relationship>
+        </relationships>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Bubble Map'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='MySpotifyDataTable+' name='federated.0yqm4np0ddulkn1ae0c4q1j5ukma' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0yqm4np0ddulkn1ae0c4q1j5ukma'>
+            <column caption='Minutes Played' datatype='real' name='[Calculation_3614420189739880448]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[msPlayed]/1000/60' />
+            </column>
+            <column datatype='string' name='[genres]' role='dimension' type='nominal' />
+            <column caption='Ms Played' datatype='integer' name='[msPlayed]' role='measure' type='quantitative' />
+            <column-instance column='[genres]' derivation='None' name='[none:genres:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_3614420189739880448]' derivation='Sum' name='[sum:Calculation_3614420189739880448:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0yqm4np0ddulkn1ae0c4q1j5ukma].[none:genres:nk]'>
+            <groupfilter function='except' user:ui-domain='database' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:genres:nk]' />
+              <groupfilter function='member' level='[none:genres:nk]' member='%null%' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.0yqm4np0ddulkn1ae0c4q1j5ukma].[none:genres:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.0yqm4np0ddulkn1ae0c4q1j5ukma].[sum:Calculation_3614420189739880448:qk]' palette='orange_10_0' type='interpolated' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <encodings>
+              <color column='[federated.0yqm4np0ddulkn1ae0c4q1j5ukma].[sum:Calculation_3614420189739880448:qk]' />
+              <size column='[federated.0yqm4np0ddulkn1ae0c4q1j5ukma].[sum:Calculation_3614420189739880448:qk]' />
+              <text column='[federated.0yqm4np0ddulkn1ae0c4q1j5ukma].[none:genres:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{9DE6EB7E-91A4-4231-89A2-C067C7DA6E79}' />
+    </worksheet>
+    <worksheet name='Distribution of Minutes Listened to per day through Months'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='MySpotifyDataTable+' name='federated.0yqm4np0ddulkn1ae0c4q1j5ukma' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0yqm4np0ddulkn1ae0c4q1j5ukma'>
+            <column caption='Minutes Played' datatype='real' name='[Calculation_3614420189739880448]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[msPlayed]/1000/60' />
+            </column>
+            <column caption='End Time' datatype='datetime' name='[endTime]' role='dimension' type='ordinal' />
+            <column caption='Ms Played' datatype='integer' name='[msPlayed]' role='measure' type='quantitative' />
+            <column-instance column='[endTime]' derivation='MY' name='[my:endTime:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Calculation_3614420189739880448]' derivation='Sum' name='[sum:Calculation_3614420189739880448:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[endTime]' derivation='Day-Trunc' name='[tdy:endTime:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <mark-sizing custom-mark-size-in-axis-units='1.0' mark-alignment='mark-alignment-left' mark-sizing-setting='marks-scaling-on' use-custom-mark-size='false' />
+          </pane>
+        </panes>
+        <rows>[federated.0yqm4np0ddulkn1ae0c4q1j5ukma].[sum:Calculation_3614420189739880448:qk]</rows>
+        <cols>[federated.0yqm4np0ddulkn1ae0c4q1j5ukma].[tdy:endTime:qk]</cols>
+        <pages>
+          <column>[federated.0yqm4np0ddulkn1ae0c4q1j5ukma].[my:endTime:ok]</column>
+        </pages>
+      </table>
+      <simple-id uuid='{FD102907-ADD2-420A-8D89-10EE5A951E95}' />
+    </worksheet>
+    <worksheet name='Minutes played per Day'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='MySpotifyDataTable+' name='federated.0yqm4np0ddulkn1ae0c4q1j5ukma' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0yqm4np0ddulkn1ae0c4q1j5ukma'>
+            <column caption='Minutes Played' datatype='real' name='[Calculation_3614420189739880448]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[msPlayed]/1000/60' />
+            </column>
+            <column caption='End Time' datatype='datetime' name='[endTime]' role='dimension' type='ordinal' />
+            <column caption='Ms Played' datatype='integer' name='[msPlayed]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_3614420189739880448]' derivation='Sum' name='[sum:Calculation_3614420189739880448:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[endTime]' derivation='Day-Trunc' name='[tdy:endTime:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.0yqm4np0ddulkn1ae0c4q1j5ukma].[sum:Calculation_3614420189739880448:qk]</rows>
+        <cols>[federated.0yqm4np0ddulkn1ae0c4q1j5ukma].[tdy:endTime:qk]</cols>
+      </table>
+      <simple-id uuid='{02CEDE33-3BEE-4564-BA2C-CF982B01CDF4}' />
+    </worksheet>
+    <worksheet name='Minutes played per Month'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='MySpotifyDataTable+' name='federated.0yqm4np0ddulkn1ae0c4q1j5ukma' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0yqm4np0ddulkn1ae0c4q1j5ukma'>
+            <column caption='Minutes Played' datatype='real' name='[Calculation_3614420189739880448]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[msPlayed]/1000/60' />
+            </column>
+            <column caption='Artist Name' datatype='string' name='[artistName]' role='dimension' type='nominal' />
+            <column caption='End Time' datatype='datetime' name='[endTime]' role='dimension' type='ordinal' />
+            <column-instance column='[endTime]' derivation='Month' name='[mn:endTime:ok]' pivot='key' type='ordinal' />
+            <column caption='Ms Played' datatype='integer' name='[msPlayed]' role='measure' type='quantitative' />
+            <column-instance column='[artistName]' derivation='None' name='[none:artistName:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_3614420189739880448]' derivation='Sum' name='[sum:Calculation_3614420189739880448:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <encodings>
+              <path column='[federated.0yqm4np0ddulkn1ae0c4q1j5ukma].[none:artistName:nk]' />
+              <text column='[federated.0yqm4np0ddulkn1ae0c4q1j5ukma].[none:artistName:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0yqm4np0ddulkn1ae0c4q1j5ukma].[sum:Calculation_3614420189739880448:qk]</rows>
+        <cols>[federated.0yqm4np0ddulkn1ae0c4q1j5ukma].[mn:endTime:ok]</cols>
+      </table>
+      <simple-id uuid='{E9AA7267-106A-4720-A637-2BABC05F8274}' />
+    </worksheet>
+    <worksheet name='Minutes played through Quarter'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='MySpotifyDataTable+' name='federated.0yqm4np0ddulkn1ae0c4q1j5ukma' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0yqm4np0ddulkn1ae0c4q1j5ukma'>
+            <column caption='Minutes Played' datatype='real' name='[Calculation_3614420189739880448]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[msPlayed]/1000/60' />
+            </column>
+            <column caption='End Time' datatype='datetime' name='[endTime]' role='dimension' type='ordinal' />
+            <column-instance column='[endTime]' derivation='Month' name='[mn:endTime:ok]' pivot='key' type='ordinal' />
+            <column caption='Ms Played' datatype='integer' name='[msPlayed]' role='measure' type='quantitative' />
+            <column-instance column='[endTime]' derivation='Quarter' name='[qr:endTime:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Calculation_3614420189739880448]' derivation='Sum' name='[sum:Calculation_3614420189739880448:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[endTime]' derivation='Year' name='[yr:endTime:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Area' />
+          </pane>
+        </panes>
+        <rows>[federated.0yqm4np0ddulkn1ae0c4q1j5ukma].[sum:Calculation_3614420189739880448:qk]</rows>
+        <cols>([federated.0yqm4np0ddulkn1ae0c4q1j5ukma].[yr:endTime:ok] / ([federated.0yqm4np0ddulkn1ae0c4q1j5ukma].[qr:endTime:ok] / [federated.0yqm4np0ddulkn1ae0c4q1j5ukma].[mn:endTime:ok]))</cols>
+      </table>
+      <simple-id uuid='{8129B683-7C2B-4CA3-9EEF-C16B5578D42F}' />
+    </worksheet>
+    <worksheet name='Top Songs'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='MySpotifyDataTable+' name='federated.0yqm4np0ddulkn1ae0c4q1j5ukma' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0yqm4np0ddulkn1ae0c4q1j5ukma'>
+            <column caption='Minutes Played' datatype='real' name='[Calculation_3614420189739880448]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[msPlayed]/1000/60' />
+            </column>
+            <column caption='Ms Played' datatype='integer' name='[msPlayed]' role='measure' type='quantitative' />
+            <column-instance column='[trackName]' derivation='None' name='[none:trackName:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_3614420189739880448]' derivation='Sum' name='[sum:Calculation_3614420189739880448:qk]' pivot='key' type='quantitative' />
+            <column caption='Track Name' datatype='string' name='[trackName]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.0yqm4np0ddulkn1ae0c4q1j5ukma].[none:trackName:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.0yqm4np0ddulkn1ae0c4q1j5ukma].[sum:Calculation_3614420189739880448:qk]' shelf='rows' />
+          </shelf-sorts>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.0yqm4np0ddulkn1ae0c4q1j5ukma].[none:trackName:nk]</rows>
+        <cols>[federated.0yqm4np0ddulkn1ae0c4q1j5ukma].[sum:Calculation_3614420189739880448:qk]</cols>
+      </table>
+      <simple-id uuid='{5A74DD32-650D-4D6F-B64B-21EEE7019734}' />
+    </worksheet>
+    <worksheet name='Total Minutes played for Artist'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='MySpotifyDataTable+' name='federated.0yqm4np0ddulkn1ae0c4q1j5ukma' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0yqm4np0ddulkn1ae0c4q1j5ukma'>
+            <column caption='Minutes Played' datatype='real' name='[Calculation_3614420189739880448]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[msPlayed]/1000/60' />
+            </column>
+            <column caption='Artist Name' datatype='string' name='[artistName]' role='dimension' type='nominal' />
+            <column caption='Ms Played' datatype='integer' name='[msPlayed]' role='measure' type='quantitative' />
+            <column-instance column='[artistName]' derivation='None' name='[none:artistName:nk]' pivot='key' type='nominal' />
+            <column-instance column='[trackName]' derivation='None' name='[none:trackName:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_3614420189739880448]' derivation='Sum' name='[sum:Calculation_3614420189739880448:qk]' pivot='key' type='quantitative' />
+            <column caption='Track Name' datatype='string' name='[trackName]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <computed-sort column='[federated.0yqm4np0ddulkn1ae0c4q1j5ukma].[none:trackName:nk]' direction='DESC' using='[federated.0yqm4np0ddulkn1ae0c4q1j5ukma].[sum:Calculation_3614420189739880448:qk]' />
+          <filter class='quantitative' column='[federated.0yqm4np0ddulkn1ae0c4q1j5ukma].[sum:Calculation_3614420189739880448:qk]' included-values='in-range'>
+            <min>0.0</min>
+            <max>955.54786666666428</max>
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.0yqm4np0ddulkn1ae0c4q1j5ukma].[none:artistName:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.0yqm4np0ddulkn1ae0c4q1j5ukma].[sum:Calculation_3614420189739880448:qk]' shelf='rows' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.0yqm4np0ddulkn1ae0c4q1j5ukma].[sum:Calculation_3614420189739880448:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0yqm4np0ddulkn1ae0c4q1j5ukma].[sum:Calculation_3614420189739880448:qk]' />
+              <lod column='[federated.0yqm4np0ddulkn1ae0c4q1j5ukma].[none:trackName:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0yqm4np0ddulkn1ae0c4q1j5ukma].[none:artistName:nk]</rows>
+        <cols>[federated.0yqm4np0ddulkn1ae0c4q1j5ukma].[sum:Calculation_3614420189739880448:qk]</cols>
+      </table>
+      <simple-id uuid='{3BC4BBE8-58BA-49B3-82F3-98C19ED56553}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' name='Minutes played per Month'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{1751DD5A-DA23-421B-AD32-C3512D126362}' />
+    </window>
+    <window class='worksheet' name='Minutes played per Day'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{5217F4EF-DB40-48C3-AA62-B89BBE1FB6B4}' />
+    </window>
+    <window class='worksheet' name='Total Minutes played for Artist'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='300'>
+            <card param='[federated.0yqm4np0ddulkn1ae0c4q1j5ukma].[sum:Calculation_3614420189739880448:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+            <card pane-specification-id='0' param='[federated.0yqm4np0ddulkn1ae0c4q1j5ukma].[sum:Calculation_3614420189739880448:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{382CC89F-3DDD-4024-BC05-C8F2E8577B31}' />
+    </window>
+    <window class='worksheet' name='Minutes played through Quarter'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{44F5A79A-F2CD-4486-93A3-7ABFF85E44AD}' />
+    </window>
+    <window class='worksheet' name='Distribution of Minutes Listened to per day through Months'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='300'>
+            <card type='currpage' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <current-page>
+          <multibucket>
+            <bucket>202201</bucket>
+          </multibucket>
+        </current-page>
+      </viewpoint>
+      <simple-id uuid='{32CA6FBC-E0C0-48FD-8009-F30F87892730}' />
+    </window>
+    <window class='worksheet' name='Top Songs'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{F05572C7-92E3-4CEA-8F0C-29E434FA8D4C}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Bubble Map'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.0yqm4np0ddulkn1ae0c4q1j5ukma].[none:genres:nk]' type='filter' />
+            <card pane-specification-id='0' param='[federated.0yqm4np0ddulkn1ae0c4q1j5ukma].[sum:Calculation_3614420189739880448:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{EE393D06-B0ED-48D8-822C-E41C5F6EDE2B}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Bubble Map' width='192'>
+      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
+      2gAAf37odu89jwkAAAAASUVORK5CYII=
+    </thumbnail>
+  </thumbnails>
+</workbook>
